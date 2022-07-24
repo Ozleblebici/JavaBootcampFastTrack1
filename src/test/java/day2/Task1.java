@@ -8,13 +8,13 @@ public class Task1 {
 
     public static void main(String[] args) {
 
-checkLetter();
+      //  checkLetter();
 
+        
     }
 
 
-
-    public static void checkLetter(){
+    public static void checkLetter() {
 
         Scanner scanner = new Scanner(System.in);
 
