@@ -1,12 +1,15 @@
 package day3;
 
+import java.util.Arrays;
+
 public class ArrayLoopEx {
 
 
     public static void main(String[] args) {
 
-        String[] str = {};
+        String[] str = {"AA"};
 
+        System.out.println(Arrays.toString(arrayInsertValue(str, 0, "DD")));
 
     }
 
@@ -45,7 +48,7 @@ public class ArrayLoopEx {
             return returnArray;
         }
 
-//
+// ALGORITHM
 //        for(){
 //          // add all exist array element to new one!!
 //            if (given elements index = i ){
@@ -53,6 +56,22 @@ public class ArrayLoopEx {
 //                    update index !!!
 //            }
 //        }
+
+        boolean flag = true;
+
+        for (int i = 0,j=0; i < returnArray.length; i++,j++) {
+
+            if (flag && (i == indexKeyword)) {
+                returnArray[j] = keyword;
+                i--;
+                flag = false;
+            } else {
+                if(i == strArray.length){break; }  // to handle scenario 2
+
+                returnArray[j] = strArray[i];
+            }
+        }
+
         return returnArray;
     }
 
